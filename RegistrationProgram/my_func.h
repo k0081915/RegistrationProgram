@@ -6,4 +6,5 @@ void delete_member();
 void sort();
 void find_by_birth();
 void regist_from_file();
+void sort_by_birth();
 #endif

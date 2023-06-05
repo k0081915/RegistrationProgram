@@ -24,7 +24,7 @@ int main()
 	while (1)
 	{
 		printf("====================<MENU>====================\n");
-		printf("<1.Registration><2.ShowAll><3.Delete><4.FindByBirth><5.RegistFromFile><6.Exit>\n");
+		printf("<1.Registration><2.ShowAll><3.Delete><4.FindByBirth><5.SortByBirth><6.RegistFromFile><7.Exit>\n");
 		printf("Enter the menu number: ");
 		scanf("%d", &num);
 
@@ -47,10 +47,14 @@ int main()
 			find_by_birth();
 			break;
 		case 5:
+			// 회원 정보를 생년월일 순으로 정렬해서 보여준다.
+			sort_by_birth();
+			break;
+		case 6:
 			// 파일에 저장되어있는 회원정보를 불러온다.
 			regist_from_file();
 			break;
-		case 6:
+		case 7:
 			// 프로그램을 종료할 때 리스트에 저장되어있는 회원 정보를 파일에 등록한다.
 			fp = fopen("INFORMATION.txt", "w");
 			if (fp == NULL) { // 파일 열기에 실패한 경우

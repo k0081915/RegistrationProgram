@@ -134,6 +134,7 @@
     <ClCompile Include="print_all.c" />
     <ClCompile Include="regist_from_file.c" />
     <ClCompile Include="sort.c" />
+    <ClCompile Include="sort_by_birth.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="my_define.h" />
