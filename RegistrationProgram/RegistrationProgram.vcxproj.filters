@@ -36,6 +36,15 @@
     <ClCompile Include="find_by_birth.c">
       <Filter>소스 파일\function</Filter>
     </ClCompile>
+    <ClCompile Include="regist_from_file.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_by_birth.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="change.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="my_struct.h">

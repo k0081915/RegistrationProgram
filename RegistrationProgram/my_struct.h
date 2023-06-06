@@ -5,5 +5,6 @@ typedef struct personal_information
 	char* name;
 	char* tel_no;
 	char* birth;
+	char* rank;
 }PI;
 #endif
