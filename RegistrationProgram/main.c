@@ -25,8 +25,8 @@ int main()
 	while (1)
 	{
 		printf("\n================================================\n");
-		printf("아래에서 원하는 항목을 선택하세요\n\n");
-		printf("[1. 등록] [2. 삭제] [3. 검색]\n[4. 정렬] [5. 불러오기] [6. 종료]\n");
+		printf("아래에서 원하는 항목을 선택하세요\n");
+		printf("[1. 등록] [2. 삭제] [3. 검색]\n[4. 정렬] [5. 정보 수정] [6. 종료]\n");
 		printf("================================================\n");
 		printf(">> ");
 		scanf("%d", &num);
@@ -42,8 +42,18 @@ int main()
 			delete_member();
 			break;
 		case 3:
-			// 생년월일을 입력받아서 회원 정보를 찾는다.
-			find_by_birth();
+			// 무엇으로 검색할지 정하고 해당하는 정보를 출력한다.
+			printf("------------------------------------------------\n");
+			printf("무엇으로 검색하시겠습니까?\n");
+			printf("[1. 생년월일로 검색] [2. 등급으로 검색]\n");
+			printf(">> ");
+			scanf("%d", &num2);
+			if (num2 == 1) {
+				find_by_birth();
+			}
+			else {
+				find_by_rank();
+			}
 			break;
 		case 4:
 			// 회원 정보를 정렬해서 모두 출력한다.
@@ -60,8 +70,8 @@ int main()
 			}
 			break;
 		case 5:
-			// 파일에 저장되어있는 회원정보를 불러온다.
-			regist_from_file();
+			// 이름으로 검색하여 전화번호, 생년월일, 등급을 변경한다.
+			change();
 			break;
 		case 6:
 			// 프로그램을 종료할 때 리스트에 저장되어있는 회원 정보를 파일에 등록한다.
@@ -72,7 +82,7 @@ int main()
 			}
 			for (int i = 0; i < cnt; i++)
 			{
-				fprintf(fp, "%s %s %s\n", list[i]->name, list[i]->tel_no, list[i]->birth);
+				fprintf(fp, "%s %s %s %s\n", list[i]->name, list[i]->tel_no, list[i]->birth, list[i]->rank);
 			}
 			fclose(fp);
 			return 0;	
