@@ -39,6 +39,7 @@ void delete_member()
 			free(list[cnt]->name);
 			free(list[cnt]->tel_no);
 			free(list[cnt]->birth);
+			free(list[cnt]->rank);
 			free(list[cnt]);
 			break;
 		}

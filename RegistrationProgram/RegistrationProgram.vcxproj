@@ -130,10 +130,10 @@
     <ClCompile Include="change.c" />
     <ClCompile Include="delete_member.c" />
     <ClCompile Include="find_by_birth.c" />
+    <ClCompile Include="find_by_rank.c" />
     <ClCompile Include="insert.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="print_all.c" />
-    <ClCompile Include="regist_from_file.c" />
     <ClCompile Include="sort.c" />
     <ClCompile Include="sort_by_birth.c" />
   </ItemGroup>

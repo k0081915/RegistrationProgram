@@ -62,6 +62,18 @@ void insert()
 	}
 	strcpy(list[cnt]->birth, tmp);   //구조체 생년월일 메모리할당
 
+	// 등급을 입력받고 리스트에 저장한다.
+	printf("등급: ");
+	scanf("%s", tmp);
+	L = strlen(tmp) + 1;
+	list[cnt]->rank = (char*)malloc(L * sizeof(char));
+	if (list[cnt]->rank == NULL)	// 오류 처리 코드
+	{
+		printf("error\n");
+		return -1;
+	}
+	strcpy(list[cnt]->rank, tmp);   //구조체 등급 메모리할당
+
 	// 회원 수 업데이트
 	cnt++;
 	printf("<<현재 회원 수: %d>>\n", cnt);

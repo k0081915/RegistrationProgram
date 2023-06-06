@@ -6,27 +6,23 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// 생년월일을 입력받아서 회원 정보를 찾는다.
-void find_by_birth()
-{
-	int m, n;
+void find_by_rank() {
+	char rank[21];
 
-	// 회원이 존재하지 않다면
 	if (cnt == 0) {
 		printf("회원이 존재하지 않습니다.\n");
 		return -1;
 	}
 
 	printf("------------------------------------------------\n");
-	printf("생년월일: ");
-	scanf("%d", &m);
+	printf("등급: ");
+	scanf("%s", rank);
 
 	for (int i = 0; i < cnt; i++)
 	{
-		n = atoi(list[i]->birth);	// 정수로 바꿈
-		if (m == n)
+		if (strcmp(list[i]->rank, rank) == 0)
 		{
-			// 해당 생년월일에 해당하는 정보 출력
+			// 해당 등급에 해당하는 정보 출력
 			printf("%s %s %s %s\n", list[i]->name, list[i]->tel_no, list[i]->birth, list[i]->rank);
 		}
 	}
