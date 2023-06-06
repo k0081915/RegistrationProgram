@@ -6,8 +6,8 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// 회원 정보를 이름 순(오름차순)으로 정렬한다.
-void sort()
+// 회원 정보를 생년월일 순(오름차순)으로 정렬한다.
+void sort_by_birth()
 {
 	if (cnt == 0) {
 		printf("회원이 존재하지 않습니다.\n");
@@ -19,7 +19,7 @@ void sort()
 	{
 		for (int j = i + 1; j < cnt; j++)
 		{
-			if (strcmp(list[i]->name, list[j]->name) > 0)
+			if (strcmp(list[i]->birth, list[j]->birth) > 0)
 			{
 				tmp = list[i];
 				list[i] = list[j];

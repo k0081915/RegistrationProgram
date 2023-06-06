@@ -11,6 +11,12 @@ void find_by_birth()
 {
 	int m, n;
 
+	if (cnt == 0) {
+		printf("회원이 존재하지 않습니다.\n");
+		return -1;
+	}
+
+	printf("------------------------------------------------\n");
 	printf("생년월일: ");
 	scanf("%d", &m);
 

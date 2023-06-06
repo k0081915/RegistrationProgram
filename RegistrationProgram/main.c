@@ -9,10 +9,11 @@
 cnt = 0;
 int main()
 {
-	int num;
+	int num, num2;
 	FILE* fp;
-
-	printf("최대 회원 수: ");
+	
+	printf("--------------[회원 등록 프로그램]--------------\n");
+	printf("최대로 등록할 수 있는 회원 수: ");
 	scanf("%d", &max_num);
 	list = (PI**)malloc(max_num * sizeof(PI*));   //동적할당
 	if (list == NULL)
@@ -23,9 +24,11 @@ int main()
 
 	while (1)
 	{
-		printf("====================<MENU>====================\n");
-		printf("<1.Registration><2.ShowAll><3.Delete><4.FindByBirth><5.Exit>\n");
-		printf("Enter the menu number: ");
+		printf("\n================================================\n");
+		printf("아래에서 원하는 항목을 선택하세요\n\n");
+		printf("[1. 등록] [2. 삭제] [3. 검색]\n[4. 정렬] [5. 불러오기] [6. 종료]\n");
+		printf("================================================\n");
+		printf(">> ");
 		scanf("%d", &num);
 
 		switch (num)
@@ -35,18 +38,32 @@ int main()
 			insert();
 			break;
 		case 2:
-			// 회원 정보를 모두 출력한다.
-			print_all();
-			break;
-		case 3:
 			// 이름을 입력받아서 회원 정보를 삭제한다.
 			delete_member();
 			break;
-		case 4:
+		case 3:
 			// 생년월일을 입력받아서 회원 정보를 찾는다.
 			find_by_birth();
 			break;
+		case 4:
+			// 회원 정보를 정렬해서 모두 출력한다.
+			printf("------------------------------------------------\n");
+			printf("무엇을 기준으로 정렬하시겠습니까?\n");
+			printf("[1. 이름 순으로 정렬] [2. 생년월일 순으로 정렬]\n");
+			printf(">> ");
+			scanf("%d", &num2);
+			if (num2 == 1) {
+				sort();
+			}
+			else {
+				sort_by_birth();
+			}
+			break;
 		case 5:
+			// 파일에 저장되어있는 회원정보를 불러온다.
+			regist_from_file();
+			break;
+		case 6:
 			// 프로그램을 종료할 때 리스트에 저장되어있는 회원 정보를 파일에 등록한다.
 			fp = fopen("INFORMATION.txt", "w");
 			if (fp == NULL) { // 파일 열기에 실패한 경우
@@ -58,7 +75,7 @@ int main()
 				fprintf(fp, "%s %s %s\n", list[i]->name, list[i]->tel_no, list[i]->birth);
 			}
 			fclose(fp);
-			return 0;
+			return 0;	
 		}
 	}
 }
