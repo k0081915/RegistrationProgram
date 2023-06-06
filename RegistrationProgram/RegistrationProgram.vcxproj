@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="change.c" />
     <ClCompile Include="delete_member.c" />
     <ClCompile Include="find_by_birth.c" />
     <ClCompile Include="insert.c" />

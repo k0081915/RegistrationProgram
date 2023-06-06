@@ -21,6 +21,7 @@ void delete_member()
 	}
 
 	printf("------------------------------------------------\n");
+	printf("삭제할 회원의 이름을 입력해주세요\n");
 	printf("이름: ");
 	scanf("%s", name);
 	for (int i = 0; i < cnt; i++)
@@ -42,8 +43,9 @@ void delete_member()
 			break;
 		}
 	}
-
+	// 회원이 검색되지 않았으면 존재하지 않다고 출력
 	if (flag == 0) {
 		printf("회원이 존재하지 않습니다.\n");
 	}
+	printf("삭제가 완료되었습니다\n");
 }

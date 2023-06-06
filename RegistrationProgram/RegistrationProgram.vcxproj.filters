@@ -13,5 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\function">
+      <UniqueIdentifier>{4231b8c2-1f89-416c-86d7-93d95836e34e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="insert.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="delete_member.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="sort.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="print_all.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="find_by_birth.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="regist_from_file.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_by_birth.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+    <ClCompile Include="change.c">
+      <Filter>소스 파일\function</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="my_struct.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="my_define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="my_func.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
