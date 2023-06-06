@@ -6,33 +6,35 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// ÀÌ¸§À» ÀÔ·Â¹Ş¾Æ¼­ È¸¿ø Á¤º¸¸¦ »èÁ¦ÇÑ´Ù.
+// ì´ë¦„ì„ ì…ë ¥ë°›ì•„ì„œ íšŒì› ì •ë³´ë¥¼ ì‚­ì œí•œë‹¤.
 void delete_member()
 {
 	char name[21];
 	int flag = 0;
 	PI* tmp;
 
-	// È¸¿ø ¼ö°¡ 0ÀÌ¶ó¸é
+	// íšŒì› ìˆ˜ê°€ 0ì´ë¼ë©´
 	if (cnt == 0)
 	{
-		printf("È¸¿øÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n");
+		printf("íšŒì›ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
 		return;
 	}
 
-	printf("ÀÌ¸§: ");
+
+	printf("------------------------------------------------\n");
+	printf("ì´ë¦„: ");
 	scanf("%s", name);
 	for (int i = 0; i < cnt; i++)
 	{
-		if (strcmp(list[i]->name, name) == 0)   // ÀÌ¸§ °°À¸¸é »èÁ¦
+		if (strcmp(list[i]->name, name) == 0)   // ì´ë¦„ ê°™ìœ¼ë©´ ì‚­ì œ
 		{
-			flag = 1;	// »èÁ¦ µÇ¾úÀ¸¸é flag 1
-			tmp = list[i];	// ÇöÀç Á¤º¸ ÀúÀå
+			flag = 1;	// ì‚­ì œ ë˜ì—ˆìœ¼ë©´ flag 1
+			tmp = list[i];	// í˜„ì¬ ì •ë³´ ì €ì¥
 			for (int j = i; j < cnt - 1; j++)
 			{
-				list[j] = list[j + 1];   // ´ÙÀ½°Å µ¤¾î¾²±â
+				list[j] = list[j + 1];   // ë‹¤ìŒê±° ë®ì–´ì“°ê¸°
 			}
-			list[cnt - 1] = tmp;	// ¸®½ºÆ®ÀÇ ¸¶Áö¸·¿¡ ºÙ¿©³Ö°í free() ÇØÁÜ
+			list[cnt - 1] = tmp;	// ë¦¬ìŠ¤íŠ¸ì˜ ë§ˆì§€ë§‰ì— ë¶™ì—¬ë„£ê³  free() í•´ì¤Œ
 			cnt--;
 			free(list[cnt]->name);
 			free(list[cnt]->tel_no);
@@ -43,6 +45,6 @@ void delete_member()
 	}
 
 	if (flag == 0) {
-		printf("È¸¿øÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n");
+		printf("íšŒì›ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
 	}
 }

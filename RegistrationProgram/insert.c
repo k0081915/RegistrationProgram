@@ -6,7 +6,7 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// È¸¿ø Á¤º¸¸¦ ¹Ş¾Æ¼­ ¸®½ºÆ®¿¡ µî·ÏÇÑ´Ù.
+// íšŒì› ì •ë³´ë¥¼ ë°›ì•„ì„œ ë¦¬ìŠ¤íŠ¸ì— ë“±ë¡í•œë‹¤.
 void insert()
 {
 	int L;
@@ -14,57 +14,55 @@ void insert()
 
 	if (cnt == max_num)
 	{
-		printf("ÃÖ´ë È¸¿ø ¼ö¸¦ ³Ñ¾î¼­ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.\n");
+		printf("ìµœëŒ€ íšŒì› ìˆ˜ë¥¼ ë„˜ì–´ì„œ ë“±ë¡í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
 		return -1;
 	}
 
-	list[cnt] = (PI*)malloc(sizeof(PI));   //µ¿ÀûÇÒ´ç
-	if (list[cnt] == NULL)	// ¿À·ù Ã³¸® ÄÚµå
+	list[cnt] = (PI*)malloc(sizeof(PI));   //ë™ì í• ë‹¹
+	if (list[cnt] == NULL)	// ì˜¤ë¥˜ ì²˜ë¦¬ ì½”ë“œ
 	{
 		printf("error\n");
 		return -1;
 	}
 
-	// ÀÌ¸§À» ÀÔ·Â¹Ş°í ¸®½ºÆ®¿¡ ÀúÀåÇÑ´Ù.
-	printf("ÀÌ¸§: ");
+	// ì´ë¦„ì„ ì…ë ¥ë°›ê³  ë¦¬ìŠ¤íŠ¸ì— ì €ì¥í•œë‹¤.
+	printf("------------------------------------------------\n");
+	printf("ì´ë¦„: ");
 	scanf("%s", tmp);
 	L = strlen(tmp) + 1;
 	list[cnt]->name = (char*)malloc(L * sizeof(char));
-	if (list[cnt]->name == NULL)	// ¿À·ù Ã³¸® ÄÚµå
+	if (list[cnt]->name == NULL)	// ì˜¤ë¥˜ ì²˜ë¦¬ ì½”ë“œ
 	{
 		printf("error\n");
 		return -1;
 	}
-	strcpy(list[cnt]->name, tmp);	//±¸Á¶Ã¼ ÀÌ¸§ ¸Ş¸ğ¸®ÇÒ´ç
+	strcpy(list[cnt]->name, tmp);	//êµ¬ì¡°ì²´ ì´ë¦„ ë©”ëª¨ë¦¬í• ë‹¹
 
-	// ¹øÈ£¸¦ ÀÔ·Â¹Ş°í ¸®½ºÆ®¿¡ ÀúÀåÇÑ´Ù.
-	printf("ÀüÈ­¹øÈ£: ");
+	// ë²ˆí˜¸ë¥¼ ì…ë ¥ë°›ê³  ë¦¬ìŠ¤íŠ¸ì— ì €ì¥í•œë‹¤.
+	printf("ì „í™”ë²ˆí˜¸: ");
 	scanf("%s", tmp);
 	L = strlen(tmp) + 1;
 	list[cnt]->tel_no = (char*)malloc(L * sizeof(char));
-	if (list[cnt]->tel_no == NULL)	// ¿À·ù Ã³¸® ÄÚµå
+	if (list[cnt]->tel_no == NULL)	// ì˜¤ë¥˜ ì²˜ë¦¬ ì½”ë“œ
 	{
 		printf("error\n");
 		return -1;
 	}
-	strcpy(list[cnt]->tel_no, tmp);   //±¸Á¶Ã¼ ¹øÈ£ ¸Ş¸ğ¸®ÇÒ´ç
+	strcpy(list[cnt]->tel_no, tmp);   //êµ¬ì¡°ì²´ ë²ˆí˜¸ ë©”ëª¨ë¦¬í• ë‹¹
 
-	// »ı³â¿ùÀÏÀ» ÀÔ·Â¹Ş°í ¸®½ºÆ®¿¡ ÀúÀåÇÑ´Ù.
-	printf("»ı³â¿ùÀÏ: ");
+	// ìƒë…„ì›”ì¼ì„ ì…ë ¥ë°›ê³  ë¦¬ìŠ¤íŠ¸ì— ì €ì¥í•œë‹¤.
+	printf("ìƒë…„ì›”ì¼: ");
 	scanf("%s", tmp);
 	L = strlen(tmp) + 1;
 	list[cnt]->birth = (char*)malloc(L * sizeof(char));
-	if (list[cnt]->birth == NULL)	// ¿À·ù Ã³¸® ÄÚµå
+	if (list[cnt]->birth == NULL)	// ì˜¤ë¥˜ ì²˜ë¦¬ ì½”ë“œ
 	{
 		printf("error\n");
 		return -1;
 	}
-	strcpy(list[cnt]->birth, tmp);   //±¸Á¶Ã¼ »ı³â¿ùÀÏ ¸Ş¸ğ¸®ÇÒ´ç
+	strcpy(list[cnt]->birth, tmp);   //êµ¬ì¡°ì²´ ìƒë…„ì›”ì¼ ë©”ëª¨ë¦¬í• ë‹¹
 
-	// È¸¿ø ¼ö ¾÷µ¥ÀÌÆ®
+	// íšŒì› ìˆ˜ ì—…ë°ì´íŠ¸
 	cnt++;
-	printf("<<ÇöÀç È¸¿ø ¼ö: %d>>\n", cnt);
-
-	// ÀÌ¸§ ¼øÀ¸·Î Á¤·Ä
-	sort();
+	printf("<<í˜„ì¬ íšŒì› ìˆ˜: %d>>\n", cnt);
 }

@@ -6,19 +6,20 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// íšŒì› ì •ë³´ë¥¼ ì´ë¦„ ìˆœ(ì˜¤ë¦„ì°¨ìˆœ)ìœ¼ë¡œ ì •ë ¬í•œë‹¤.
-void sort()
+// È¸¿ø Á¤º¸¸¦ »ı³â¿ùÀÏ ¼ø(¿À¸§Â÷¼ø)À¸·Î Á¤·ÄÇÑ´Ù.
+void sort_by_birth()
 {
 	if (cnt == 0) {
-		printf("íšŒì›ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
+		printf("È¸¿øÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n");
 		return -1;
 	}
+
 	PI* tmp;
 	for (int i = 0; i < cnt - 1; i++)
 	{
 		for (int j = i + 1; j < cnt; j++)
 		{
-			if (strcmp(list[i]->name, list[j]->name) > 0)
+			if (strcmp(list[i]->birth, list[j]->birth) > 0)
 			{
 				tmp = list[i];
 				list[i] = list[j];

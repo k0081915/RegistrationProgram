@@ -6,17 +6,24 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// »ı³â¿ùÀÏÀ» ÀÔ·Â¹Ş¾Æ¼­ È¸¿ø Á¤º¸¸¦ Ã£´Â´Ù.
+// ìƒë…„ì›”ì¼ì„ ì…ë ¥ë°›ì•„ì„œ íšŒì› ì •ë³´ë¥¼ ì°¾ëŠ”ë‹¤.
 void find_by_birth()
 {
 	int m, n;
 
-	printf("»ı³â¿ùÀÏ: ");
+
+	if (cnt == 0) {
+		printf("íšŒì›ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
+		return -1;
+	}
+
+	printf("------------------------------------------------\n");
+	printf("ìƒë…„ì›”ì¼: ");
 	scanf("%d", &m);
 
 	for (int i = 0; i < cnt; i++)
 	{
-		n = atoi(list[i]->birth);	// Á¤¼ö·Î ¹Ù²Ş
+		n = atoi(list[i]->birth);	// ì •ìˆ˜ë¡œ ë°”ê¿ˆ
 		if (m == n)
 		{
 			printf("%s %s %s\n", list[i]->name, list[i]->tel_no, list[i]->birth);
