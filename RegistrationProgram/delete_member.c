@@ -48,6 +48,7 @@ void delete_member()
 	// 회원이 검색되지 않았으면 존재하지 않다고 출력
 	if (flag == 0) {
 		printf("회원이 존재하지 않습니다.\n");
+		return -1;
 	}
 	printf("삭제가 완료되었습니다\n");
 }
