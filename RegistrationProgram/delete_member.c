@@ -20,6 +20,7 @@ void delete_member()
 		return;
 	}
 
+	printf("------------------------------------------------\n");
 	printf("¿Ã∏ß: ");
 	scanf("%s", name);
 	for (int i = 0; i < cnt; i++)

@@ -9,6 +9,11 @@
 // 회원 정보를 이름 순(오름차순)으로 정렬한다.
 void sort()
 {
+	if (cnt == 0) {
+		printf("회원이 존재하지 않습니다.\n");
+		return -1;
+	}
+
 	PI* tmp;
 	for (int i = 0; i < cnt - 1; i++)
 	{
@@ -22,4 +27,5 @@ void sort()
 			}
 		}
 	}
+	print_all();
 }
