@@ -50,5 +50,5 @@ void delete_member()
 		printf("회원이 존재하지 않습니다.\n");
 		return -1;
 	}
-	printf("삭제가 완료되었습니다\n");
+	printf("<삭제가 완료되었습니다>\n");
 }
