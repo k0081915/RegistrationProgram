@@ -14,6 +14,8 @@
 
 ## 사용법
 
+release에서 v2.0을 다운받는다. 
+
 Visual Studio에 main.c를 포함한 모든 .c 파일을 소스파일에 넣어주고
 
 my_define.h를 포함한 모든 .h 파일을 헤더파일에 넣어준다.
