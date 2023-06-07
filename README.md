@@ -14,7 +14,7 @@
 
 ## 사용법
 
-release에서 v2.0을 다운받는다. 
+Releases에서 v2.0을 다운받는다. 
 
 Visual Studio에 main.c를 포함한 모든 .c 파일을 소스파일에 넣어주고
 
