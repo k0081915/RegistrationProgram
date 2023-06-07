@@ -27,10 +27,12 @@ void change() {
 			flag = 1;
 		}
 	}
+	// 입력한 이름이 존재하지 않으면 출력
 	if (flag == 0) {
 		printf("회원이 존재하지 않습니다.\n");
 		return -1;
 	}
+
 	// 존재하면 수정할 전화번호, 생년월일, 등급 입력
 	printf("전화번호: ");
 	scanf("%s", tel);
@@ -41,6 +43,7 @@ void change() {
 
 	for (int i = 0; i < cnt; i++) {
 		if (strcmp(list[i]->name, name) == 0) {
+			// 변경 전 정보를 출력하고 변경사항을 반영하고 변경된 내용을 보여준다
 			printf("[%s %s %s %s] -> ", list[i]->name, list[i]->tel_no, list[i]->birth, list[i]->rank);
 			strcpy(list[i]->tel_no, tel);
 			strcpy(list[i]->birth, birth);
@@ -49,5 +52,5 @@ void change() {
 		}
 	}
 	
-	printf("수정이 완료되었습니다\n");
+	printf("<수정이 완료되었습니다>\n");
 }

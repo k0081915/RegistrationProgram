@@ -6,29 +6,29 @@
 #include "my_define.h"
 #include "my_func.h"
 
-// ìƒë…„ì›”ì¼ì„ ì…ë ¥ë°›ì•„ì„œ íšŒì› ì •ë³´ë¥¼ ì°¾ëŠ”ë‹¤.
+// »ı³â¿ùÀÏÀ» ÀÔ·Â¹Ş¾Æ¼­ È¸¿ø Á¤º¸¸¦ Ã£´Â´Ù.
 void find_by_birth()
 {
 	int m, n;
 
 
-	// íšŒì›ì´ ì¡´ì¬í•˜ì§€ ì•Šë‹¤ë©´
+	// È¸¿øÀÌ Á¸ÀçÇÏÁö ¾Ê´Ù¸é
 	if (cnt == 0) {
-		printf("íšŒì›ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
+		printf("È¸¿øÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n");
 		return -1;
 	}
 
 	printf("------------------------------------------------\n");
-	printf("ìƒë…„ì›”ì¼: ");
+	printf("»ı³â¿ùÀÏ: ");
 	scanf("%d", &m);
 
 	for (int i = 0; i < cnt; i++)
 	{
-		n = atoi(list[i]->birth);	// ì •ìˆ˜ë¡œ ë°”ê¿ˆ
+		n = atoi(list[i]->birth);	// Á¤¼ö·Î ¹Ù²Ş
 		if (m == n)
 		{
-			// í•´ë‹¹ ìƒë…„ì›”ì¼ì— í•´ë‹¹í•˜ëŠ” ì •ë³´ ì¶œë ¥
-			printf("%s %s %s %s\n", list[i]->name, list[i]->tel_no, list[i]->birth, list[i]->rank);
+			// ÇØ´ç »ı³â¿ùÀÏ¿¡ ÇØ´çÇÏ´Â Á¤º¸ Ãâ·Â
+			printf("[%s %s %s %s]\n", list[i]->name, list[i]->tel_no, list[i]->birth, list[i]->rank);
 		}
 	}
 }

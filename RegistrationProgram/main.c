@@ -12,10 +12,10 @@ int main()
 	int num, num2;
 	FILE* fp;
 	
-	printf("--------------[íšŒì› ë“±ë¡ í”„ë¡œê·¸ëž¨]--------------\n");
-	printf("ìµœëŒ€ë¡œ ë“±ë¡í•  ìˆ˜ ìžˆëŠ” íšŒì› ìˆ˜: ");
+	printf("--------------[È¸¿ø µî·Ï ÇÁ·Î±×·¥]--------------\n");
+	printf("ÃÖ´ë·Î µî·ÏÇÒ ¼ö ÀÖ´Â È¸¿ø ¼ö: ");
 	scanf("%d", &max_num);
-	list = (PI**)malloc(max_num * sizeof(PI*));   //ë™ì í• ë‹¹
+	list = (PI**)malloc(max_num * sizeof(PI*));   //µ¿ÀûÇÒ´ç
 	if (list == NULL)
 	{
 		printf("error\n");
@@ -25,8 +25,8 @@ int main()
 	while (1)
 	{
 		printf("\n================================================\n");
-		printf("ì•„ëž˜ì—ì„œ ì›í•˜ëŠ” í•­ëª©ì„ ì„ íƒí•˜ì„¸ìš”\n");
-		printf("[1. ë“±ë¡] [2. ì‚­ì œ] [3. ê²€ìƒ‰]\n[4. ì •ë ¬] [5. ì •ë³´ ìˆ˜ì •] [6. ì¢…ë£Œ]\n");
+		printf("¾Æ·¡¿¡¼­ ¿øÇÏ´Â Ç×¸ñÀ» ¼±ÅÃÇÏ¼¼¿ä\n");
+		printf("[1. µî·Ï] [2. »èÁ¦] [3. °Ë»ö]\n[4. Á¤·Ä] [5. Á¤º¸ ¼öÁ¤] [6. Á¾·á]\n");
 		printf("================================================\n");
 		printf(">> ");
 		scanf("%d", &num);
@@ -34,18 +34,18 @@ int main()
 		switch (num)
 		{
 		case 1:
-			// íšŒì› ì •ë³´ë¥¼ ë°›ì•„ì„œ ë¦¬ìŠ¤íŠ¸ì— ë“±ë¡í•œë‹¤.
+			// È¸¿ø Á¤º¸¸¦ ¹Þ¾Æ¼­ ¸®½ºÆ®¿¡ µî·ÏÇÑ´Ù.
 			insert();
 			break;
 		case 2:
-			// ì´ë¦„ì„ ìž…ë ¥ë°›ì•„ì„œ íšŒì› ì •ë³´ë¥¼ ì‚­ì œí•œë‹¤.
+			// ÀÌ¸§À» ÀÔ·Â¹Þ¾Æ¼­ È¸¿ø Á¤º¸¸¦ »èÁ¦ÇÑ´Ù.
 			delete_member();
 			break;
 		case 3:
-			// ë¬´ì—‡ìœ¼ë¡œ ê²€ìƒ‰í• ì§€ ì •í•˜ê³  í•´ë‹¹í•˜ëŠ” ì •ë³´ë¥¼ ì¶œë ¥í•œë‹¤.
+			// ¹«¾ùÀ¸·Î °Ë»öÇÒÁö Á¤ÇÏ°í ÇØ´çÇÏ´Â Á¤º¸¸¦ Ãâ·ÂÇÑ´Ù.
 			printf("------------------------------------------------\n");
-			printf("ë¬´ì—‡ìœ¼ë¡œ ê²€ìƒ‰í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
-			printf("[1. ìƒë…„ì›”ì¼ë¡œ ê²€ìƒ‰] [2. ë“±ê¸‰ìœ¼ë¡œ ê²€ìƒ‰]\n");
+			printf("¹«¾ùÀ¸·Î °Ë»öÇÏ½Ã°Ú½À´Ï±î?\n");
+			printf("[1. »ý³â¿ùÀÏ·Î °Ë»ö] [2. µî±ÞÀ¸·Î °Ë»ö]\n");
 			printf(">> ");
 			scanf("%d", &num2);
 			if (num2 == 1) {
@@ -56,10 +56,10 @@ int main()
 			}
 			break;
 		case 4:
-			// íšŒì› ì •ë³´ë¥¼ ì •ë ¬í•´ì„œ ëª¨ë‘ ì¶œë ¥í•œë‹¤.
+			// È¸¿ø Á¤º¸¸¦ Á¤·ÄÇØ¼­ ¸ðµÎ Ãâ·ÂÇÑ´Ù.
 			printf("------------------------------------------------\n");
-			printf("ë¬´ì—‡ì„ ê¸°ì¤€ìœ¼ë¡œ ì •ë ¬í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
-			printf("[1. ì´ë¦„ ìˆœìœ¼ë¡œ ì •ë ¬] [2. ìƒë…„ì›”ì¼ ìˆœìœ¼ë¡œ ì •ë ¬]\n");
+			printf("¹«¾ùÀ» ±âÁØÀ¸·Î Á¤·ÄÇÏ½Ã°Ú½À´Ï±î?\n");
+			printf("[1. ÀÌ¸§ ¼øÀ¸·Î Á¤·Ä] [2. »ý³â¿ùÀÏ ¼øÀ¸·Î Á¤·Ä]\n");
 			printf(">> ");
 			scanf("%d", &num2);
 			if (num2 == 1) {
@@ -70,14 +70,14 @@ int main()
 			}
 			break;
 		case 5:
-			// ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•˜ì—¬ ì „í™”ë²ˆí˜¸, ìƒë…„ì›”ì¼, ë“±ê¸‰ì„ ë³€ê²½í•œë‹¤.
+			// ÀÌ¸§À¸·Î °Ë»öÇÏ¿© ÀüÈ­¹øÈ£, »ý³â¿ùÀÏ, µî±ÞÀ» º¯°æÇÑ´Ù.
 			change();
 			break;
 		case 6:
-			// í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•  ë•Œ ë¦¬ìŠ¤íŠ¸ì— ì €ìž¥ë˜ì–´ìžˆëŠ” íšŒì› ì •ë³´ë¥¼ íŒŒì¼ì— ë“±ë¡í•œë‹¤.
+			// ÇÁ·Î±×·¥À» Á¾·áÇÒ ¶§ ¸®½ºÆ®¿¡ ÀúÀåµÇ¾îÀÖ´Â È¸¿ø Á¤º¸¸¦ ÆÄÀÏ¿¡ µî·ÏÇÑ´Ù.
 			fp = fopen("INFORMATION.txt", "w");
-			if (fp == NULL) { // íŒŒì¼ ì—´ê¸°ì— ì‹¤íŒ¨í•œ ê²½ìš°
-				printf("Couldn't open file"); // ì˜¤ë¥˜ ì²˜ë¦¬ ì½”ë“œ
+			if (fp == NULL) { // ÆÄÀÏ ¿­±â¿¡ ½ÇÆÐÇÑ °æ¿ì
+				printf("Couldn't open file"); // ¿À·ù Ã³¸® ÄÚµå
 				return -1;
 			}
 			for (int i = 0; i < cnt; i++)
